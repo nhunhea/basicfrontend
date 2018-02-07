@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Form Registrasi</title>
+</head>
+<script>
+    function validasi() {
+    var nama = document.getElementById("nama").value;
+    var lahir = document.getElementById("lahir").value;
+    if (nama != "" && lahir !="") {
+        return true;
+    }else{
+        alert('Isi dulu! Nama dan Tanggal Lahir tidak boleh kosong.');
+    }
+}
+</script>
+
+<style type="text/css">
+    #formregist {margin:0 auto;width:400px;background-color:rgb(223, 130, 218);padding:10px; font-family:Palatino;}
+    h1 { padding:5px; margin:10px; text-align:center }
+    form label { float:left; width:100px; padding:5px;}
+    form br { clear:left;}
+    #tombol { margin:10px; text-align:center; }
+    .submit { background-color: rgb(138, 6, 105);}
+    
+</style>
+<body></body>
+<form id="formregist" method="action" mailto="evan.nhea@gmail.com" onsubmit="validasi()" method="post">
+<h1>Form Registrasi</h1>
+    <label>Nama</label><input type="text" name=nama id="nama" size="30" maxlength="30"><br>
+    <label>Jenis Kelamin</label><input type=radio size="25" name=sex value=Laki-laki>Laki-laki<input type=radio name=sex value=Perempuan>Perempuan</br>
+    <label>Tanggal Lahir</label><input type="text" id="lahir" size="30" maxlength="20"><br>
+    <label>Alamat</label><textarea cols="30" rows="3" id="alamat"></textarea><br>
+    <div id="tombol">
+    <input type="submit" class="submit" value="SUBMIT" cols="30">
+    </div>
+</form>
+</body>
+</html>
